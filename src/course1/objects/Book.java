@@ -3,7 +3,7 @@ package course1.objects;
 public class Book {
     private String bookName;
     private Author author;
-    int publicationYear;
+    private int publicationYear;
 
 
     public Book(String bookName, Author author, int publicationYear) {
