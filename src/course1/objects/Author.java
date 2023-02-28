@@ -30,6 +30,20 @@ public class Author {
         return name + " " + lastname;
     }
 
+    @Override
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        Author chel = (Author) other;
+        return (name.equals(chel.name)&&lastname.equals(chel.lastname));
+    }
+
+    @Override
+    public int hashCode() {
+        return (java.util.Objects.hash(name) + java.util.Objects.hash(lastname));
+    }
+
 
 }
 

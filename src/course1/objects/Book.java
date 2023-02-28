@@ -41,6 +41,20 @@ public class Book {
         return bookName + ", " + author.toString() + ", " + publicationYear;
     }
 
+    @Override
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        Book kniga = (Book) other;
+        return (bookName.equals(kniga.bookName)&&author.equals(kniga.author));
+    }
+
+    @Override
+    public int hashCode() {
+        return (java.util.Objects.hash(bookName) + java.util.Objects.hash(author));
+    }
+
 }
 
 
