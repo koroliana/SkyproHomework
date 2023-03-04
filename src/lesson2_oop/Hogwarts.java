@@ -33,4 +33,9 @@ public class Hogwarts {
     public void setTransgressionDistance(int transgressionDistance) {
         this.transgressionDistance = transgressionDistance;
     }
+
+    @Override
+    public String toString() {
+        return name + ", сила магии: " + magicPower + ", расстояние трансгрессии: " + transgressionDistance;
+    }
 }

@@ -1,7 +1,7 @@
 package lesson2_oop;
 
 public class Gryffindor extends Hogwarts{
-    private int nobility;
+    private int nobility; //благородство
     private int honor ;
     private int courage;
 
@@ -13,6 +13,24 @@ public class Gryffindor extends Hogwarts{
         this.honor = honor;
         this.courage = courage;
 
+    }
+
+    public int getNobility() {
+        return nobility;
+    }
+
+    public int getHonor() {
+        return honor;
+    }
+
+    public int getCourage() {
+        return courage;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", факультет: Гриффиндор, благородство: " + nobility +
+                ", честь: " + honor + ", храбрость: " + courage  ;
     }
 
 }
