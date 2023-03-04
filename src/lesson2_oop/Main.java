@@ -15,6 +15,11 @@ public class Main {
         Ravenclaw padmaPatil = new Ravenclaw("Падма Патил",25,15,18,9,12,23);
         Ravenclaw marcusBelby = new Ravenclaw("Маркус Белби",15,13,15,12,8,11);
 
+        //Hufflepuff noki = new Hufflepuff("лподло", 15, 3, 0 ,0 ,120 );
+        //Gryffindor lin = new Gryffindor("лподло", 15, 3, 100 ,0 ,6 );
+        //Ravenclaw nil = new Ravenclaw("лподло", 15, 3, 100 ,0 ,6,800 );
+        //Slytherin nik = new Slytherin("лподло", 15, 3, -100 ,0 ,6,8,5 );
+
         System.out.println(harryPotter);
         System.out.println(cedricDiggory);
         harryPotter.compareHogwartsStudents(dracoMalfoy);

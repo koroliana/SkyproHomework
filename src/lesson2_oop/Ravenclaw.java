@@ -8,10 +8,14 @@ public class Ravenclaw extends Hogwarts{
 
     public Ravenclaw(String name, int magicPower, int transgressionDistance, int mind, int wisdom, int wit, int creativity) {
         super(name, magicPower, transgressionDistance);
-        this.mind = mind;
-        this.wisdom = wisdom;
-        this.wit = wit;
-        this.creativity = creativity;
+        if ((mind>=0 && mind<=100) && (wisdom>=0 && wisdom<=100)  &&
+                (wit>=0 && wit<=100) && (creativity>=0 && creativity<=100)){
+            this.mind = mind;
+            this.wisdom = wisdom;
+            this.wit = wit;
+            this.creativity = creativity;
+        }
+        else throw new RuntimeException("Значение свойства характера должно быть от 0 до 100!");
     }
 
     public int getMind() {

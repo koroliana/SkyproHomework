@@ -10,11 +10,16 @@ public class Slytherin extends Hogwarts{
 
     public Slytherin(String name, int magicPower, int transgressionDistance, int cunning, int determination, int ambition, int resourcefulness, int lustForPower) {
         super(name, magicPower, transgressionDistance);
-        this.cunning = cunning;
-        this.determination = determination;
-        this.ambition = ambition;
-        this.resourcefulness = resourcefulness;
-        this.lustForPower = lustForPower;
+        if ((cunning>=0 && cunning<=100) && (determination>=0 && determination<=100)  && (ambition>=0 && ambition<=100) &&
+        (resourcefulness>=0 && resourcefulness<=100) && (lustForPower>=0 && lustForPower<=100)){
+            this.cunning = cunning;
+            this.determination = determination;
+            this.ambition = ambition;
+            this.resourcefulness = resourcefulness;
+            this.lustForPower = lustForPower;
+        }
+        else throw new RuntimeException("Значение свойства характера должно быть от 0 до 100!");
+
     }
 
     public int getCunning() {

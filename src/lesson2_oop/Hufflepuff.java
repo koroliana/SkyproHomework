@@ -7,9 +7,14 @@ public class Hufflepuff extends Hogwarts{
 
     public Hufflepuff(String name, int magicPower, int transgressionDistance, int hardWorking, int loyalty, int honesty) {
         super(name, magicPower, transgressionDistance);
-        this.hardWorking = hardWorking;
-        this.loyalty = loyalty;
-        this.honesty = honesty;
+        if ((transgressionDistance>=0 && transgressionDistance<=100) && (hardWorking>=0 && hardWorking<=100)  &&
+                (honesty>=0 && honesty<=100)) {
+            this.hardWorking = hardWorking;
+            this.loyalty = loyalty;
+            this.honesty = honesty;
+        }
+        else throw new RuntimeException("Значение свойства характера должно быть от 0 до 100!");
+
     }
 
     public int getHardWorking() {

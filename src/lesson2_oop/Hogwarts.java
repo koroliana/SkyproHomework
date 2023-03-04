@@ -5,8 +5,6 @@ public class Hogwarts {
     private int magicPower;
     private int transgressionDistance;
 
-    // TODO: 28.02.2023  Сила магии и расстояние трансгресии у каждого ученика своё и выражается в целочисленном эквиваленте. Возможно, тоже до 100
-
     public Hogwarts(String name, int magicPower, int transgressionDistance){
         this.name = name;
         this.magicPower = magicPower;

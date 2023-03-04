@@ -9,9 +9,13 @@ public class Gryffindor extends Hogwarts{
 
     public Gryffindor(String name, int magicPower, int transgressionDistance, int nobility, int honor, int courage) {
         super(name, magicPower, transgressionDistance);
-        this.nobility = nobility;
-        this.honor = honor;
-        this.courage = courage;
+        if ((nobility>=0 && nobility<=100) && (honor>=0 && honor<=100)  &&
+                (courage>=0 && courage<=100)) {
+            this.nobility = nobility;
+            this.honor = honor;
+            this.courage = courage;
+        }
+        else throw new RuntimeException("Значение свойства характера должно быть от 0 до 100!");
 
     }
 
