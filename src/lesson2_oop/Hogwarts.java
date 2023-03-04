@@ -1,7 +1,7 @@
 package lesson2_oop;
 
 public class Hogwarts {
-    private String name;
+    private final String name;
     private int magicPower;
     private int transgressionDistance;
 
@@ -26,14 +26,16 @@ public class Hogwarts {
         return transgressionDistance;
     }
 
-    public void setMagicPower(int magicPower) {
-        this.magicPower = magicPower;
-    }
 
-    public void setTransgressionDistance(int transgressionDistance) {
-        this.transgressionDistance = transgressionDistance;
+    public void compareHogwartsStudents(Hogwarts student) {
+        if ((this.getMagicPower()+this.getTransgressionDistance()) > (student.getMagicPower()+student.getTransgressionDistance())) {
+            System.out.println(this.getName() + " - более сильный волшебник, чем " + student.getName());
+        }
+        else if ((this.getMagicPower()+this.getTransgressionDistance()) < (student.getMagicPower()+student.getTransgressionDistance())) {
+            System.out.println(student.getName() + " - более сильный волшебник, чем " + this.getName());
+        }
+        else System.out.println(student.getName() + " и " + this.getName() + " - равные по силе волшебники" );
     }
-
     @Override
     public String toString() {
         return name + ", сила магии: " + magicPower + ", расстояние трансгрессии: " + transgressionDistance;
