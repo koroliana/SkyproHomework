@@ -1,18 +1,14 @@
 package course2.lesson3_oop;
 
-public class Truck {
-    public String modelName;
-    public int wheelsCount;
-
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
+public class Truck extends Vehicle {
+    Truck(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
     }
 
-    public void checkEngine() {
+    @Override
+    public void vehicleCheckup() {
+        super.vehicleCheckup();
         System.out.println("Проверяем двигатель");
-    }
-
-    public void checkTrailer() {
         System.out.println("Проверяем прицеп");
     }
 }
