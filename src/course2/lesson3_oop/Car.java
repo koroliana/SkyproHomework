@@ -1,14 +1,15 @@
 package course2.lesson3_oop;
 
-public class Car {
-    public String modelName;
-    public int wheelsCount;
-
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
+public class Car extends Vehicle{
+    Car(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
     }
 
-    public void checkEngine() {
+    @Override
+    public void vehicleCheckup() {
+        super.vehicleCheckup();
         System.out.println("Проверяем двигатель");
     }
+
+
 }
